@@ -11,6 +11,7 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
+    <link rel="stylesheet" type="text/css" media="all" href="/styles/styles.css" />
 
     <!-- Bootstrap core CSS     -->
     <link href="/styles/css/bootstrap.min.css" rel="stylesheet" />
@@ -307,10 +308,16 @@
                                         </div>
                                     </div>
 
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Upload PO</button>
+                                    <div>
+                                        <label for="fileselect">Files to upload:</label>
+                                        <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+                                        <div id="filedrag">or drop files here</div>
                                     </div>
-                                    <div class="clearfix"></div>
+
+                                    <div id="submitbutton">
+                                        <button type="submit">Upload Files</button>
+                                    </div>
+                                    </fieldset>
                                 </form>
                             </div>
                         </div>
@@ -418,5 +425,7 @@
 
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="/styles/js/demo.js"></script>
+
+    <script src="/styles/filedrag.js"></script>
 	
 </html>
