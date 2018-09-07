@@ -27,8 +27,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Bean
 	@Override
 	public UserDetailsService userDetailsService() {
-		UserValidate userValidate = new UserValidate();
-
 		@SuppressWarnings("deprecation")
 		UserDetails user = User.withDefaultPasswordEncoder().username("user").password("password").roles("USER")
 				.build();
